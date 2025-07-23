@@ -1,0 +1,9 @@
+## Example Google Sheets formula to format rainfall data
+
+={"INDIA METEOROLOGICAL DEPARTMENT", "", "", "", "";
+ "", "", "", "", "";
+ "Station: "&station_list!A2&"","", "", "", "";
+ "All Rainfall data is in millimeters.", "", "", "", "";
+ "", "", "", "", "";
+ "STATION INDEX", "YEAR", "MONTH", "DATE", "24 HOURS RAINFALL";
+ SEQUENCE(COUNTIF(rainfall_raw!A:A, station_list!A2)), QUERY(rainfall_raw!A:F, "SELECT C, D, E, F WHERE A = '"&station_list!A2&"' ORDER BY C, D, E", 0)}
